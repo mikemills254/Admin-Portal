@@ -8,18 +8,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
         <script src="https://cdn.tailwindcss.com"></script>
-        <!-- Option 1: Include in HTML -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     </head>
     <body class="body flex flex-row h-full">
-        <div class="aside flex flex-col bg-[green] w-[10%] h-[100dvh] relatice items-center justify-between">
+        <div class="aside flex flex-col bg-[#eefaff] w-[10%] h-[100dvh] relatice items-center justify-between">
             <ul class="ul w-full my-2">
-                <li class="dash w-full bg-[blue] px-2 py-3 hover:cursor-pointer" id="dashboard-btn">
+                <li class="dash w-full bg-[#e0f5fe] px-2 font-bold text-[#0ebce9] text-[14px] py-3 hover:cursor-pointer" id="dashboard-btn">
                     Dashboard
                 </li>
             </ul>
             <ul class="ul w-full my-2">
-                <li class="dash w-full bg-[blue] px-2 py-3 hover:cursor-pointer" id="dashboard-btn">
+                <li class="dash w-full px-2 bg-[#e0f5fe] font-bold text-[14px] text-[#0ebce9] py-3 hover:cursor-pointer" id="dashboard-btn">
                     Account
                 </li>
             </ul>
@@ -34,7 +33,7 @@
                         class="search w-full border-l-[2px] outline-none pl-2"
                     />
                 </div>
-                <div class="add-btn flex flex-row items-center bg-[red] hover:cursor-pointer px-2 py-2 rounded-md" id="onboard-btn">
+                <div class="add-btn flex flex-row items-center bg-[#0ebce9] hover:cursor-pointer px-2 py-2 rounded-md" id="onboard-btn">
                     <i class="bi bi-plus" style="font-size: 20px;"></i>
                     Add New Hospital
                 </div>
@@ -42,31 +41,17 @@
             
 
             <table class="table-auto bg-white border border-collapse border-gray-300 shadow-md w-full">
-                <thead class="bg-teal-500 text-white">
+                <thead class="bg-[#0ebce9] text-white">
                     <tr>
                         <th class="px-4 py-2 border-[1px]">Hospital Name</th>
                         <th class="px-4 py-2 border-[1px]">Registration Number</th>
                         <th class="px-4 py-2 border-[1px]">Location</th>
                         <th class="px-4 py-2 border-[1px]">Contact Person</th>
                         <th class="px-4 py-2 border-[1px]">Email Address</th>
+                        <th class="px-4 py-2 border-[1px]">Location</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr class="tr border-[1px] border-b-[red] hover:cursor-pointer">
-                        <td class="td items-center py-2 justify-center text-center border-1px border-[red] border-r-[1px]">Nairobi Hospital</td>
-                        <td class="td items-center py-2 justify-center text-center border-1px border-[red] border-r-[1px]">Nairobi Hospital</td>
-                        <td class="td items-center py-2 justify-center text-center border-1px border-[red] border-r-[1px]">Nairobi Hospital</td>
-                        <td class="td items-center py-2 justify-center text-center border-1px border-[red] border-r-[1px]">Nairobi Hospital</td>
-                        <td class="td items-center py-2 justify-center text-center border-1px border-[red] border-r-[1px]">Nairobi Hospital</td>
-                    </tr>
-                    <tr class="tr border-[1px] border-b-[red]">
-                        <td class="td items-center py-2 justify-center text-center border-1px border-[red] border-r-[1px]">Nairobi Hospital</td>
-                        <td class="td items-center py-2 justify-center text-center border-1px border-[red] border-r-[1px]">Nairobi Hospital</td>
-                        <td class="td items-center py-2 justify-center text-center border-1px border-[red] border-r-[1px]">Nairobi Hospital</td>
-                        <td class="td items-center py-2 justify-center text-center border-1px border-[red] border-r-[1px]">Nairobi Hospital</td>
-                        <td class="td items-center py-2 justify-center text-center border-1px border-[red] border-r-[1px]">Nairobi Hospital</td>
-                    </tr>
-                </tbody>
+                <tbody id="hospitalTableBody"></tbody>
             </table>
             
         </div>

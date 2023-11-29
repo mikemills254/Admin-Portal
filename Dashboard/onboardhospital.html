@@ -40,6 +40,7 @@
                             name="name"
                             type="text"
                             class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
+                            required
                         />                        
                     </label>
                     <label class="label flex flex-col mb-2 w-[30dvw]">
@@ -49,11 +50,12 @@
                             name="reg-number"
                             type="text"
                             class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
+                            required
                         />                        
                     </label>
                     <label class="label flex flex-col w-[30dvw]">
                         <small class="label-name text-[15px] font-bold">Hospital Type</small>
-                        <select class="input outline-none w-full py-2 px-3 rounded-md border-[1px]" name="hospital-type">
+                        <select class="input outline-none w-full py-2 px-3 rounded-md border-[1px]" required name="hospital-type">
                             <option value="" >type of hospital</option>
                             <option>Publicly owned hospitals</option>
                             <option>Nonprofit hospitals</option>
@@ -64,7 +66,7 @@
                     </label>
                     <label class="label flex flex-col w-[30dvw]">
                         <small class="label-name text-[15px] font-bold">Services</small>
-                        <select class="input outline-none w-full py-2 px-3 rounded-md border-[1px]" name="services" aria-placeholder="services">
+                        <select class="input outline-none w-full py-2 px-3 rounded-md border-[1px]" required name="services" aria-placeholder="services">
                             <option value="">Services</option>
                             <option value="Emergency">Emergency department</option>
                             <option value="Cardiology">Cardiology department</option>
@@ -98,6 +100,7 @@
                             name="country"
                             type="text"
                             class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
+                            required
                         />                        
                     </label>
                     <label class="label flex flex-col w-[30dvw]">
@@ -107,6 +110,7 @@
                             name="region"
                             type="text"
                             class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
+                            required
                         />                        
                     </label>
                     <label class="label flex flex-col w-[30dvw]">
@@ -116,6 +120,7 @@
                             name="location"
                             type="text"
                             class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
+                            required
                         />                        
                     </label>
                     <label class="label flex flex-col w-[30dvw]">
@@ -125,6 +130,7 @@
                             name="address"
                             type="text"
                             class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
+                            required
                         />                        
                     </label>
                     <label class="label flex flex-col w-[30dvw]">
@@ -134,6 +140,7 @@
                             name="zip-code"
                             type="text"
                             class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
+                            required
                         />                        
                     </label>
                     <label class="label flex flex-col w-[30dvw]">
@@ -143,6 +150,7 @@
                             name="email"
                             type="email"
                             class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
+                            required
                         />                        
                     </label>
                     <label class="label flex flex-col w-[30dvw]">
@@ -152,20 +160,8 @@
                             name="phone"
                             type="phone"
                             class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
+                            required
                         />                        
-                    </label>
-                    <label class="label flex flex-col w-[30dvw]">
-                        <small class="label-name text-[15px] font-bold">Password</small>
-                        <div class="placeholder flex flex-row items-center border-[1px] bg-white rounded-md pr-2">
-                            <input
-                                placeholder="password"
-                                name="password-input"
-                                type="password"
-                                class="input outline-none w-full py-2 px-3"
-                                id="passwordInput"
-                            />
-                            <i class="bi bi-eye-slash hover:cursor-pointer" id="eye" onclick="togglePasswordVisibility()"></i>
-                        </div>
                     </label>
                     
                     <div class="w-full flex items-right justify-right mt-5">
