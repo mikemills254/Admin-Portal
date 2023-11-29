@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Register</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
@@ -12,7 +12,7 @@
 
     </head>
     <body class="body flex flex-col items-center p-5">
-        <form class="form flex flex-col items-center bg-[green] w-[30dvw] p-5" id="form">
+        <form class="form flex flex-col items-center bg-[green] w-[30dvw] p-5" id="register-form">
             <h1>Create Account</h1>
             
             <label class="labels w-full flex flex-row items-center my-2 bg-white">
@@ -35,7 +35,7 @@
                         name="email"
                         placeholder="email address"
                         class="input w-full p-2 outline-none text-[12px] border-l-[1px] bg-white"
-
+                        required
                     />
                 </div>
             </label>
@@ -49,17 +49,21 @@
                         placeholder="password"
                         class="input w-full p-2 outline-none text-[12px] border-l-[1px] bg-white"
                         id="passwordInput"
+                        required
                     />
                     <i class="bi bi-eye-slash mx-2 hover:cursor-pointer" id="eye"></i>
                 </div>
             </label>
 
-            <button type="submit" id="submit" class="submit-btn bg-white px-3 mt-5 py-1 text-[14px] font-semibold rounded-md uppercase "
+            <button type="submit" id="register-btn" class="submit-btn bg-white px-3 mt-5 py-1 text-[14px] font-semibold rounded-md uppercase "
             >
                 register
             </button>
+            <a href="./login.html">
+                Login
+            </a>
         </form>
         
-        <script src="./register.js" async defer></script>
+        <script src="./authentication.js" async defer></script>
     </body>
 </html>

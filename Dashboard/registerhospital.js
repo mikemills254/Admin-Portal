@@ -1,3 +1,8 @@
+const spinner = document.getElementById('spinner')
+const submit = document.getElementById('register')
+const form = document.getElementById('form');
+const inputFields = form.querySelectorAll('input, select');
+
 document.getElementById('eye').addEventListener('click', () => {
     var passwordInput = document.getElementById("passwordInput");
     var eyeIcon = document.getElementById("eye");
@@ -13,6 +18,24 @@ document.getElementById('eye').addEventListener('click', () => {
     }
 })
 
+document.addEventListener('DOMContentLoaded', () => {
+    const options = {
+        enableHighAccuracy: true,
+        timeout: 10000,
+    };
+    const success = (pos) => {
+        const longitude = pos.coords.longitude
+        const latitude = pos.coords.latitude
+        console.log(pos)
+    }
+
+    const error = (err) => {
+        console.error('Unable to fetch your location', err)
+    }
+
+    navigator.geolocation.getCurrentPosition(success, error, options)
+})
+
 const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -24,7 +47,7 @@ const handleSubmit = async (e) => {
     });
 
     try {
-        const response = await fetch('https://firebasedata.herokuapp.com/api/v1/registerSuperAdmin', {
+        const response = await fetch('https://firebasedata.herokuapp.com/api/v1/registerHospital', {
             method: 'POST',
             body: JSON.stringify(jsonData),
             headers: {
@@ -34,8 +57,8 @@ const handleSubmit = async (e) => {
     
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.message}`);
-        } else {
-            window.location.replace('/index.html');
+        }else {
+            window.location.replace('index.html')
         }
 
     } catch (error) {
@@ -43,5 +66,11 @@ const handleSubmit = async (e) => {
     }
 }
 
+
 document.getElementById('submit').addEventListener('click', handleSubmit);
+
+
+document.getElementById('dashboard-btn').addEventListener('click', () => {
+    window.location = './dashboard.html'
+})
 
