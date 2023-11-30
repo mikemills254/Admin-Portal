@@ -23,7 +23,7 @@ document.getElementById('login-btn').addEventListener('click', async (e) => {
     });
 
     try {
-        const response = await fetch('https://firebasedata.herokuapp.com/api/v1/loginSuperAdmin', {
+        const response = await fetch('https://firebasedata.herokuapp.com/api/v1/loginHospital', {
             method: 'POST',
             body: JSON.stringify(jsonData),
             headers: {

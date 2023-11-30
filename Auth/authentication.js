@@ -23,18 +23,21 @@ document.getElementById('register-btn').addEventListener('click', async (e) => {
     });
 
     try {
-        const response = await fetch('https://firebasedata.herokuapp.com/api/v1/registerSuperAdmin', {
+        const response = await fetch('https://firebasedata.herokuapp.com/api/v1/primeAdmin', {
             method: 'POST',
             body: JSON.stringify(jsonData),
             headers: {
                 "Content-Type": "application/json",
             }
         });
+
+        console.log(response)
     
         if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.message}`);
+            throw new Error(`HTTP error! Status: ${response}`);
         } else {
             window.location.replace('../Dashboard/dashboard.html');
+            console.log(response)
         }
 
     } catch (error) {

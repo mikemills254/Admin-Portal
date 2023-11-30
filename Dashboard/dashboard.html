@@ -29,8 +29,10 @@
                 <div class="search border-[1px] w-[40%] p-1 flex flex-row items-center rounded-md">
                     <i class="bi bi-search mx-2 rounded-md"></i>
                     <input
+                        id="searchInput"
                         placeholder="..search"
                         class="search w-full border-l-[2px] outline-none pl-2"
+                        oninput="handleSearch()"
                     />
                 </div>
                 <div class="add-btn flex flex-row items-center bg-[#0ebce9] hover:cursor-pointer px-2 py-2 rounded-md" id="onboard-btn">
