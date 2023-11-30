@@ -22,10 +22,15 @@
 
     </head>
     <body class="body flex flex-row items-center bg-[#eefaff] " id="content-body">
-        <div class="aside flex flex-col bg-[green] w-[10%] h-[100dvh] relatice items-center">
-            <ul class="ul w-full">
-                <li class="dash w-full bg-[blue] px-2 py-3 hover:cursor-pointer" id="dashboard-btn">
+        <div class="aside flex flex-col bg-[#eefaff] w-[10%] h-[100dvh] relatice items-center justify-between">
+            <ul class="ul w-full my-2">
+                <li class="dash w-full bg-[#e0f5fe] px-2 font-bold text-[#0ebce9] text-[14px] py-3 hover:cursor-pointer" id="dashboard-btn">
                     Dashboard
+                </li>
+            </ul>
+            <ul class="ul w-full my-2">
+                <li class="dash w-full px-2 bg-[#e0f5fe] font-bold text-[14px] text-[#0ebce9] py-3 hover:cursor-pointer" id="dashboard-btn">
+                    Account
                 </li>
             </ul>
         </div>
@@ -40,7 +45,6 @@
                             name="name"
                             type="text"
                             class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
-                            required
                         />                        
                     </label>
                     <label class="label flex flex-col mb-2 w-[30dvw]">
@@ -50,12 +54,12 @@
                             name="reg-number"
                             type="text"
                             class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
-                            required
+                            
                         />                        
                     </label>
                     <label class="label flex flex-col w-[30dvw]">
                         <small class="label-name text-[15px] font-bold">Hospital Type</small>
-                        <select class="input outline-none w-full py-2 px-3 rounded-md border-[1px]" required name="hospital-type">
+                        <select class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"  name="hospital-type">
                             <option value="" >type of hospital</option>
                             <option>Publicly owned hospitals</option>
                             <option>Nonprofit hospitals</option>
@@ -66,7 +70,7 @@
                     </label>
                     <label class="label flex flex-col w-[30dvw]">
                         <small class="label-name text-[15px] font-bold">Services</small>
-                        <select class="input outline-none w-full py-2 px-3 rounded-md border-[1px]" required name="services" aria-placeholder="services">
+                        <select class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"  name="services" aria-placeholder="services">
                             <option value="">Services</option>
                             <option value="Emergency">Emergency department</option>
                             <option value="Cardiology">Cardiology department</option>
@@ -100,7 +104,6 @@
                             name="country"
                             type="text"
                             class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
-                            required
                         />                        
                     </label>
                     <label class="label flex flex-col w-[30dvw]">
@@ -110,7 +113,6 @@
                             name="region"
                             type="text"
                             class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
-                            required
                         />                        
                     </label>
                     <label class="label flex flex-col w-[30dvw]">
@@ -120,7 +122,6 @@
                             name="location"
                             type="text"
                             class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
-                            required
                         />                        
                     </label>
                     <label class="label flex flex-col w-[30dvw]">
@@ -130,7 +131,6 @@
                             name="address"
                             type="text"
                             class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
-                            required
                         />                        
                     </label>
                     <label class="label flex flex-col w-[30dvw]">
@@ -140,7 +140,6 @@
                             name="zip-code"
                             type="text"
                             class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
-                            required
                         />                        
                     </label>
                     <label class="label flex flex-col w-[30dvw]">
@@ -150,7 +149,6 @@
                             name="email"
                             type="email"
                             class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
-                            required
                         />                        
                     </label>
                     <label class="label flex flex-col w-[30dvw]">
@@ -160,12 +158,11 @@
                             name="phone"
                             type="phone"
                             class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
-                            required
                         />                        
                     </label>
                     
                     <div class="w-full flex items-right justify-right mt-5">
-                        <button class="register-btn bg-[#09b2ee] w-[30%] text-white py-2 px-4 rounded flex flex-col items-center uppercase font-bold" type="submit" id="submit">
+                        <button class="register-btn bg-[#09b2ee] w-[30%] text-white py-2 px-4 rounded flex flex-col items-center uppercase font-bold" type="submit" id="register">
                             <h1 class="submit uppercase" id="register">Register</h1>
                             <div class="spinner flex items-center hidden" id="spinner">
                                 <div class="animate-spin rounded-full h-8 w-8 border-t-4 border-[#153456] border-solid"></div>

@@ -1,112 +1,104 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-        <title>Admin Portal</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <!-- Option 1: Include in HTML -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-        <style>
-            @media (max-width: 425px) {
-                .body{
-                    display: flex;
-                    flex-direction: column;
-                }
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <title>Admin Portal</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
+
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <style>
+        @media (max-width: 425px) {
+            .body {
+                display: flex;
+                flex-direction: column;
             }
-        </style>
+        }
+    </style>
 
-    </head>
-    <body class="body flex flex-row items-center bg-[#eefaff] " id="content-body">
-        <div class="aside flex flex-col bg-[green] w-[10%] h-[100dvh] relatice items-center">
-            <ul class="ul w-full">
-                <li class="dash w-full bg-[blue] px-2 py-3 hover:cursor-pointer" id="dashboard-btn">
-                    Dashboard
-                </li>
-            </ul>
-        </div>
-        <div class="register flex flex-col wrap-nowrap px-5 items-center w-[70dvw] h-[100dvh] py-2 gap-6">
-            <h1 class="register-text text-center text-xl font-semibold uppercase text-[#09b2ee]">Register New Hospital</h1>
-            <div class="form-container flex flex-col relative border-[1px] border-[#8fe0ff] p-3 rounded-lg items-center justify-center">
-                <form class="form flex flex-wrap gap-x-4 gap-y-2 items-center " id="form">
-                    <label class="label flex flex-col mb-2 w-[30dvw]">
-                        <small class="label-name text-[15px] font-bold">First Name</small>
-                        <input
-                            placeholder="First name"
-                            name="first-name"
-                            type="text"
-                            class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
-                            required
-                        />                        
-                    </label>
-                    <label class="label flex flex-col mb-2 w-[30dvw]">
-                        <small class="label-name text-[15px] font-bold">Last Name</small>
-                        <input
-                            placeholder="Last name"
-                            name="last-name"
-                            type="text"
-                            class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
-                            required
-                        />                        
-                    </label>
+</head>
+
+<body class="body flex flex-row items-center bg-[#eefaff] " id="content-body">
+    <div class="aside flex flex-col bg-[green] w-[10%] h-[100dvh] relatice items-center">
+        <ul class="ul w-full">
+            <li class="dash w-full bg-[blue] px-2 py-3 hover:cursor-pointer" id="dashboard-btn">
+                Dashboard
+            </li>
+        </ul>
+    </div>
+    <div class="register flex flex-col wrap-nowrap px-5 items-center w-[70dvw] h-[100dvh] py-2 gap-6">
+        <h1 class="register-text text-center text-xl font-semibold uppercase text-[#09b2ee]">Register New Hospital</h1>
+        <div
+            class="form-container flex flex-col relative border-[1px] border-[#8fe0ff] p-3 rounded-lg items-center justify-center">
+            <form class="form flex flex-wrap gap-x-4 gap-y-2 items-center " id="form">
+                <label class="label flex flex-col mb-2 w-[30dvw]">
+                    <small class="label-name text-[15px] font-bold">First Name</small>
+                    <input placeholder="First name" name="first-name" type="text"
+                        class="input outline-none w-full py-2 px-3 rounded-md border-[1px]" required />
+                </label>
+                <label class="label flex flex-col mb-2 w-[30dvw]">
+                    <small class="label-name text-[15px] font-bold">Last Name</small>
+                    <input placeholder="Last name" name="last-name" type="text"
+                        class="input outline-none w-full py-2 px-3 rounded-md border-[1px]" required />
+                </label>
 
 
-                  
-                    <label class="label flex flex-col w-[30dvw]">
-                        <small class="label-name text-[15px] font-bold">Role</small>
-                        <select class="input outline-none w-full py-2 px-3 rounded-md border-[1px]" required name="services" aria-placeholder="services">
-                            
-                            <option value="Super Admin">Super Admin</option>
-                            <option value="HR">HR</option>
-                            <option value="Finance">Finance</option>
-                            <option value="Customer Support">Customer Support</option>
 
-                        </select>
-                    </label>
-                    
-                  
-                  
-                  
-                   
-                    <label class="label flex flex-col w-[30dvw]">
-                        <small class="label-name text-[15px] font-bold">Email Address</small>
-                        <input
-                            placeholder="name"
-                            name="email"
-                            type="email"
-                            class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
-                            required
-                        />                        
-                    </label>
-                    <label class="label flex flex-col w-[30dvw]">
-                        <small class="label-name text-[15px] font-bold">Contact Number</small>
-                        <input
-                            placeholder="contact person number"
-                            name="phone"
-                            type="phone"
-                            class="input outline-none w-full py-2 px-3 rounded-md border-[1px]"
-                            required
-                        />                        
-                    </label>
-                    
-                    <div class="w-full flex items-right justify-right mt-5">
-                        <button class="register-btn bg-[#09b2ee] w-[30%] text-white py-2 px-4 rounded flex flex-col items-center uppercase font-bold" type="submit" id="submit">
-                            <h1 class="submit uppercase" id="register">Register</h1>
-                            <div class="spinner flex items-center hidden" id="spinner">
-                                <div class="animate-spin rounded-full h-8 w-8 border-t-4 border-[#153456] border-solid"></div>
+                <label class="label flex flex-col w-[30dvw]">
+                    <small class="label-name text-[15px] font-bold">Role</small>
+                    <select class="input outline-none w-full py-2 px-3 rounded-md border-[1px]" required name="services"
+                        aria-placeholder="services">
+
+                        <option value="Super Admin">Super Admin</option>
+                        <option value="HR">HR</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Customer Support">Customer Support</option>
+
+                    </select>
+                </label>
+
+
+
+
+
+                <label class="label flex flex-col w-[30dvw]">
+                    <small class="label-name text-[15px] font-bold">Email Address</small>
+                    <input placeholder="name" name="email" type="email"
+                        class="input outline-none w-full py-2 px-3 rounded-md border-[1px]" required />
+                </label>
+                <label class="label flex flex-col w-[30dvw]">
+                    <small class="label-name text-[15px] font-bold">Contact Number</small>
+                    <input placeholder="contact person number" name="phone" type="phone"
+                        class="input outline-none w-full py-2 px-3 rounded-md border-[1px]" required />
+                </label>
+
+                <div class="w-full flex items-right justify-right mt-5">
+                    <button
+                        class="register-btn bg-[#09b2ee] w-[30%] text-white py-2 px-4 rounded flex flex-col items-center uppercase font-bold"
+                        type="submit" id="submit">
+                        <h1 class="submit uppercase" id="register">Register</h1>
+                        <div class="spinner flex items-center hidden" id="spinner">
+                            <div class="animate-spin rounded-full h-8 w-8 border-t-4 border-[#153456] border-solid">
                             </div>
-                        </button>
-                    </div>
-                </form>
-            </div>
-            
+                        </div>
+                    </button>
+                </div>
+            </form>
         </div>
 
     </div>
-        <script src="./add-admin.js"></script>
-    </body>
+
+    </div>
+    <script src="../Hospital/firebase.js"></script>
+    <script src="./add-admin.js"></script>
+
+</body>
+
 </html>

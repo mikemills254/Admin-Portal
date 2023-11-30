@@ -1,30 +1,75 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
-        <title>Admin Portal</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <!-- Option 1: Include in HTML -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-        <style>
-            @media (max-width: 425px) {
-                .body{
-                    display: flex;
-                    flex-direction: column;
-                }
-            }
-        </style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin Portal</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            /* Colors */
+            --lightest-green: #DFFFDD;
+            --light-green: #a3cc9c;
+            --green: #69e451;
+            --dark-green: #1fb800;
+            --darkest-green: #168500;
+            --green-tint: #134030;
+            --light-green-tint: #236053;
+            --light-grey: #d0d5d1;
+            --grey: #b2b8b3;
+            --goldy-light: #eedba9;
+            --tint: #0A652C;
 
-    </head>
-    <body class="body flex flex-col items-center">
-        <h1>Welcome to admin portal</h1>
-        <a href="./Auth/register.html">Register</a>
-        <a href="./Auth/login.html">Login</a>
-        <script src="" async defer></script>
-    </body>
+            --red: #ff3370;
+            --blue: #288cff;
+            --green-text: #477559;
+            --grey-text: #57585ab0;
+            --shadow-green: #1fb800de;
+            --white: #fff;
+            --black: #000;
+            --text-dark: #073828d6;
+            --dark-cyan: #259bbc;
+
+
+            /* Font Sizes */
+            --fz-xxxs: 10px;
+            --fz-xxs: 12px;
+            --fz-xs: 13px;
+            --fz-sm: 14px;
+            --fz-md: 16px;
+            --fz-lg: 18px;
+            --fz-xl: 20px;
+            --fz-xxl: 22px;
+
+            /*Height*/
+            --td-height: 28px;
+        }
+    </style>
+</head>
+<body class="body flex flex-col items-center p-5 bg-[var(--lightestgit add .
+git-green)]">
+    <h1 class="welcom text-3xl font-bold text-[var(--darkest-green)]">Welcome to Admin Portal</h1>
+    <div class="flex flex-row gap-10 items-center ">
+        <button class="bg-[var(--darkest-green)] p-3 w-[10rem] text-white font-bold" id="register">
+            Register
+        </button>
+        <button class="bg-[var(--darkest-green)] p-3 w-[10rem] text-white font-bold" id="login">
+            Login
+        </button>
+    </div>
+    
+
+    <script>
+        document.getElementById('register').addEventListener('click', () => {
+            window.location = "./Auth/register.html"
+        })
+        document.getElementById('login').addEventListener('click', () => {
+            window.location = "./Auth/register.html"
+        })
+    </script>
+</body>
 </html>

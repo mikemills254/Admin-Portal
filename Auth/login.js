@@ -13,9 +13,9 @@ document.getElementById('eye').addEventListener('click', () => {
     }
 })
 
-document.getElementById('register-btn').addEventListener('click', async (e) => {
+document.getElementById('login-btn').addEventListener('click', async (e) => {
     e.preventDefault();
-    const formData = new FormData(document.getElementById('register-form'));
+    const formData = new FormData(document.getElementById('login-form'));
 
     const jsonData = {};
     formData.forEach((value, key) => {
@@ -23,21 +23,18 @@ document.getElementById('register-btn').addEventListener('click', async (e) => {
     });
 
     try {
-        const response = await fetch('https://firebasedata.herokuapp.com/api/v1/primeAdmin', {
+        const response = await fetch('https://firebasedata.herokuapp.com/api/v1/loginHospital', {
             method: 'POST',
             body: JSON.stringify(jsonData),
             headers: {
                 "Content-Type": "application/json",
             }
         });
-
-        console.log(response)
     
         if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response}`);
+            throw new Error(`HTTP error! Status: ${response.message}`);
         } else {
             window.location.replace('../Dashboard/dashboard.html');
-            console.log(response)
         }
 
     } catch (error) {
