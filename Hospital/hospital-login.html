@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase.js"></script>
+
+</head>
+<body class="body flex flex-col items-center p-5">
+    <form class="form flex flex-col items-center bg-[green] w-[30dvw] p-5" id="login-form">
+        <h1>Login Account</h1>
+        <label class="labels w-full flex flex-row items-center my-2">
+            <div class="mid flex flex-row item-center w-full bg-white">
+                <i class="bi bi-envelope mx-2"></i>
+                <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="email address"
+                    class="input w-full p-2 outline-none text-[12px] border-l-[1px] bg-white"
+                    required
+                />
+            </div>
+        </label>
+
+        <label class="labels w-full flex flex-row items-center my-2">
+            <div class="mid flex flex-row items-center w-full bg-white">
+                <i class="bi bi-lock mx-2"></i>
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="password"
+                    class="input w-full p-2 outline-none text-[12px] border-l-[1px] bg-white"
+                    id="passwordInput"
+                    required
+                />
+                <i class="bi bi-eye-slash mx-2 hover:cursor-pointer" id="eye"></i>
+            </div>
+        </label>
+
+        <button type="submit" id="login-btn" class="submit-btn bg-white px-3 mt-5 py-1 text-[14px] font-semibold rounded-md uppercase">
+            login
+        </button>
+        <a href="./register.html">Register</a>
+    </form>
+
+    <script src="./firebase.js"></script>
+    <script src="./login.js"></script>
+</body>
+</html>

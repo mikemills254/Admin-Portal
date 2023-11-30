@@ -1,5 +1,5 @@
 document.getElementById('onboard-btn').addEventListener('click', async () => {
-    window.location = "./onboardhospital.html";
+    window.location = "./add-admin.html";
 });
 
 document.getElementById('dashboard-btn').addEventListener('click', () => {
